@@ -6,6 +6,8 @@ from data.pascal import DatasetPASCAL
 from data.coco import DatasetCOCO
 from data.fss import DatasetFSS
 from data.industrial import DatasetIndustrial
+from data.defect import DatasetVISION
+
 
 
 class FSSDataset:
@@ -17,7 +19,8 @@ class FSSDataset:
             'pascal': DatasetPASCAL,
             'coco': DatasetCOCO,
             'fss': DatasetFSS,
-            'industrial': DatasetIndustrial
+            'industrial': DatasetIndustrial,
+            'defect': DatasetVISION
         }
 
         cls.img_mean =[0.485,0.456,0.406] #[0.4485, 0.4196, 0.3810]

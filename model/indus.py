@@ -57,7 +57,7 @@ class IndustrialNetwork(nn.Module):
                 corrs.append(corr)#s,l,n,b,1,h,w
                 sup_feats.append(sups)#s,l,n,b,2*c,h,w
 
-        logit_mask,loss = self.merge(sup_feats,corrs,diffs,gt,name=name)
+        logit_mask,loss = self.merge(sup_feats,corrs,diffs,gt)
         if not self.use_original_imgsize:
             logit_mask = F.interpolate(logit_mask, support_img.size()[-2:], mode='bilinear', align_corners=True)
 
